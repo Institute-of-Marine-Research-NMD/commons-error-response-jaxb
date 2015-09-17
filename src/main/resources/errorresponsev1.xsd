@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+           targetNamespace="http://www.imr.no/formats/errorresponse/v1"
+           xmlns="http://www.imr.no/formats/errorresponse/v1">
+
+    <xs:element name="errorresponse" type="ErrorResponseType" />
+
+    <!--
+        Error response type
+    -->
+    <xs:complexType name="ErrorResponseType">
+        <xs:sequence>
+            <xs:element name="applicationName" type="xs:string" minOccurs="1" maxOccurs="1" />
+            <xs:element name="originalMessage" type="xs:string" />
+            <xs:element name="error" type="xs:string" />
+            <xs:element name="occurenceTime" type="xs:string" />
+            <xs:element name="stackTrace" type="xs:string" minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

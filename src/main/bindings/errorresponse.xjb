@@ -1,0 +1,31 @@
+<jxb:bindings version="2.1"
+              xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+              xmlns:xs="http://www.w3.org/2001/XMLSchema"
+              xmlns:annox="http://annox.dev.java.net"
+              xmlns:namespace="http://jaxb2-commons.dev.java.net/namespace-prefix"
+              xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+              xmlns:err="http://www.imr.no/formats/errorresponse/v1"
+              jxb:extensionBindingPrefixes="xjc annox"              >
+    <!-- By Kjetil Fjellheim (IMR) -->
+    <!--
+    This document is referenced from the pom and is used to change the generated classes.
+    The following has been added. -->
+    <jxb:bindings schemaLocation="../resources/errorresponsev1.xsd" node="/xs:schema">
+        <jxb:globalBindings>
+            <jxb:serializable uid="1" />
+        </jxb:globalBindings>
+        <jxb:schemaBindings>
+            <jxb:package name="no.imr.messaging.errorresponse.domain.v1" />
+        </jxb:schemaBindings>
+        <jxb:bindings>
+            <namespace:prefix name="err" />
+        </jxb:bindings>
+
+        <jxb:bindings node="//xs:complexType[@name='ErrorResponseType']">
+            <annox:annotate>
+                <annox:annotate annox:class="javax.xml.bind.annotation.XmlRootElement" name="errorresponse"/>
+            </annox:annotate>
+        </jxb:bindings>
+
+    </jxb:bindings>
+</jxb:bindings>
