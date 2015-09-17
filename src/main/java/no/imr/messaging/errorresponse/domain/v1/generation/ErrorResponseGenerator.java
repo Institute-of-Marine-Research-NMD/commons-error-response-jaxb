@@ -10,6 +10,8 @@ import no.imr.messaging.errorresponse.domain.v1.ErrorResponseType;
  */
 public class ErrorResponseGenerator {
 
+    public static final String DATE_TIME_STRING = "yyyy-MM-dd'T'HH:mm:ss";
+
     /**
      * Generate a ErrorResponseType based on input information
      *
@@ -25,8 +27,8 @@ public class ErrorResponseGenerator {
         response.setOriginalMessage(originalMessage);
 
         response.setError(throwable.getMessage());
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
-        response.setOccurenceTime(sdf.format(new Date()));
+        SimpleDateFormat sdf = new SimpleDateFormat(DATE_TIME_STRING);
+        response.setOccurenceTime(sdf.format(date));
         StringBuilder sb = new StringBuilder();
         for (StackTraceElement element : throwable.getStackTrace()) {
             sb.append("\n".concat(element.toString()));
