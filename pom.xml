@@ -110,9 +110,9 @@
         </profile>
     </profiles>
     <scm>
-        <connection>scm:git:https://github.com/Institute-of-Marine-Research-NMD/commons-error-response-jaxb.git</connection>
-        <url>scm:git:https://github.com/Institute-of-Marine-Research-NMD/commons-error-response-jaxb.gitt</url>
-        <developerConnection>scm:git:https://github.com/Institute-of-Marine-Research-NMD/commons-error-response-jaxb.git</developerConnection>
+        <connection>scm:git:git@github.com:Institute-of-Marine-Research-NMD/commons-error-response-jaxb.git</connection>
+        <url>scm:git:git@github.com:Institute-of-Marine-Research-NMD/commons-error-response-jaxb.git</url>
+        <developerConnection>scm:git:git@github.com:Institute-of-Marine-Research-NMD/commons-error-response-jaxb.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
     <distributionManagement>
