@@ -13,6 +13,13 @@ public class ErrorResponseGenerator {
     public static final String DATE_TIME_STRING = "yyyy-MM-dd'T'HH:mm:ss";
 
     /**
+     * Hidden constructor
+     */
+    private ErrorResponseGenerator() {
+        // hidden constructor for static class
+    }
+
+    /**
      * Generate a ErrorResponseType based on input information
      *
      * @param name
